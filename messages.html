@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Messages 💬</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+font-family:Arial;
+background:#ffe6f0;
+text-align:center;
+padding:20px;
+}
+
+textarea{
+width:90%;
+height:120px;
+border-radius:15px;
+padding:10px;
+}
+
+button{
+padding:12px 20px;
+margin-top:10px;
+border:none;
+border-radius:15px;
+background:#ff4d6d;
+color:white;
+}
+
+#output{
+background:white;
+padding:15px;
+margin-top:20px;
+border-radius:15px;
+} </style>
+
+</head>
+<body>
+
+<h1>💬 Leave a Message</h1>
+
+<textarea id="msg" placeholder="Write something..."></textarea>
+
+<br>
+
+<button onclick="showMsg()">Send ❤️</button>
+
+<div id="output"></div>
+
+<script>
+function showMsg(){
+let text=document.getElementById("msg").value;
+document.getElementById("output").innerHTML=text;
+}
+</script>
+
+<br><br> <a href="menu.html">⬅ Back</a>
+
+</body>
+</html>
