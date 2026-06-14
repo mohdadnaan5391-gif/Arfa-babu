@@ -6,90 +6,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body{
-margin:0;
 font-family:Arial;
 background:linear-gradient(135deg,#ff9a9e,#fad0c4);
 text-align:center;
-overflow-x:hidden;
+padding:20px;
 }
-
-h1{
-color:white;
-margin-top:40px;
-font-size:40px;
-}
-
+h1{color:white;}
 .card{
 background:white;
-margin:20px;
-padding:20px;
+padding:15px;
+margin:15px;
 border-radius:20px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
-
 button{
-padding:12px 25px;
-border:none;
-border-radius:25px;
+display:block;
+width:90%;
+margin:10px auto;
+padding:15px;
 font-size:18px;
+border:none;
+border-radius:15px;
 background:#ff4d6d;
 color:white;
 }
-
-.heart{
-position:fixed;
-bottom:-20px;
-font-size:25px;
-animation:float 6s linear infinite;
+#menu{
+display:none;
 }
-
-@keyframes float{
-from{
-transform:translateY(0);
-}
-to{
-transform:translateY(-100vh);
-}
-} </style>
-
+</style>
 </head>
-
 <body>
 
 <h1>Adnan ❤️ Arfa</h1>
 
 <div class="card">
 <h2>Welcome Arfa</h2>
-<p>
-This website is made specially for you.
-Every smile, every memory and every moment with you is precious.
-</p>
+<p>This website is made specially for you ❤️</p>
 </div>
 
-<button onclick="showMessage()">
-Open Surprise 🎁
+<button onclick="openMenu()">Open Surprise 🎁</button>
+
+<div id="menu">
+<h2>Choose Your Surprise ❤️</h2>
+
+<button onclick="alert('Love Gallery Coming Soon 📸')">
+📸 Love Gallery
 </button>
 
-<div class="card" id="message" style="display:none;">
-You are one of the most special people in my life ❤️
+<button onclick="alert('Love Letters Coming Soon 💌')">
+💌 Love Letters
+</button>
+
+<button onclick="alert('Gift Box Coming Soon 🎁')">
+🎁 Animated Gift Box
+</button>
+
+<button onclick="alert('Counter Coming Soon ⏳')">
+⏳ Days Since We Met
+</button>
+
+<button onclick="alert('Messages Feature Coming Soon 💬')">
+💬 Leave Messages
+</button>
+
+<button onclick="alert('Chat Feature Coming Soon ❤️')">
+❤️ Chat Together
+</button>
+
 </div>
 
 <script>
-function showMessage(){
-document.getElementById("message").style.display="block";
+function openMenu(){
+document.getElementById("menu").style.display="block";
 }
-
-setInterval(()=>{
-let h=document.createElement("div");
-h.innerHTML="❤️";
-h.className="heart";
-h.style.left=Math.random()*100+"vw";
-document.body.appendChild(h);
-
-setTimeout(()=>{
-h.remove();
-},6000);
-},500);
 </script>
 
 </body>
