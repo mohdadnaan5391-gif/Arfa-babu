@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Days Since We Met ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+text-align:center;
+padding-top:50px;
+}
+
+.box{
+background:white;
+padding:25px;
+border-radius:20px;
+max-width:500px;
+margin:auto;
+}
+
+#days{
+font-size:50px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+a{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#ff4d6d;
+color:white;
+text-decoration:none;
+border-radius:15px;
+} </style>
+
+</head>
+<body>
+
+<div class="box">
+<h1>❤️ Days Since We Met ❤️</h1>
+
+<div id="days"></div>
+
+<p>Every day with you is special.</p>
+
+<a href="menu.html">⬅ Back</a>
+
+</div>
+
+<script>
+const startDate = new Date("2026-03-29");
+const today = new Date();
+
+const diffTime = today - startDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+document.getElementById("days").innerHTML = diffDays + " Days";
+</script>
+
+</body>
+</html>
