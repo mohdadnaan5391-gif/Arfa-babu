@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Choose Your Surprise ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+padding:20px;
+}
+
+h1{
+color:white;
+}
+
+.btn{
+display:block;
+width:90%;
+max-width:400px;
+margin:15px auto;
+padding:15px;
+background:white;
+border-radius:20px;
+text-decoration:none;
+font-size:20px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-100vh);}
+} </style>
+
+</head>
+
+<body>
+
+<h1>Choose Your Surprise ❤️</h1>
+
+<a class="btn" href="gallery.html">📸 Love Gallery</a>
+
+<a class="btn" href="letters.html">💌 Love Letters</a>
+
+<a class="btn" href="gift.html">🎁 Animated Gift Box</a>
+
+<a class="btn" href="counter.html">⏳ Days Since We Met</a>
+
+<a class="btn" href="messages.html">💬 Leave Messages</a>
+
+<a class="btn" href="chat.html">❤️ Chat Together</a>
+
+<script>
+setInterval(()=>{
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+},500);
+</script>
+
+</body>
+</html>
